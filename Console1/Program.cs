@@ -17,23 +17,15 @@ namespace Console1
 
         public static void test()
         {
+            Encoding big5 = Encoding.GetEncoding(950);
+
             String directory = @"g:\xx\";
-            String[] linesOld = File.ReadAllLines(Path.Combine(directory, "PDC1_old.csv"));
-            String[] linesNew = File.ReadAllLines(Path.Combine(directory, "PDC1.csv"));
+            String[] linesOld = File.ReadAllLines(Path.Combine(directory, "PDC1_old.csv"), big5);
+            String[] linesNew = File.ReadAllLines(Path.Combine(directory, "PDC1.csv"), big5);
 
             IEnumerable<String> onlyNew = linesNew.Except(linesOld);
 
-
-            String xxx = AppendAll(onlyNew, "");
-
-            int counter = 0;
-            foreach (var item in onlyNew)
-            {
-                String xx = UTF8toASCII(item);
-                counter++;
-            }
-            //File.WriteAllText(Path.Combine(directory, "Result.txt"), onlyNew, Encoding.ASCII);
-            // File.WriteAllLines(Path.Combine(directory, "Result.txt"), onlyNew, Encoding.ASCII);
+            File.WriteAllLines(Path.Combine(directory, "Result.txt"), onlyNew);
         }
 
         public static String convertToAnsi(String input)
@@ -58,7 +50,6 @@ namespace Console1
             return ascii.GetString(convertedBytes);
         }
         
-        ///*
         public static String AppendAll(IEnumerable<String> collection, String seperator)
         {
             using (var enumerator = collection.GetEnumerator())
@@ -78,7 +69,6 @@ namespace Console1
                 return builder.ToString();
             }
         }
-        //*/
 
 
     }
