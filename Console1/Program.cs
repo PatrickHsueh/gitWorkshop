@@ -17,6 +17,7 @@ namespace Console1
 
         public static void test()
         {
+             //Must specify water monitor data' encoding, which is ANSI-950 (big5) encoding.
             Encoding big5 = Encoding.GetEncoding(950);
 
             String directory = @"g:\xx\";
@@ -49,7 +50,7 @@ namespace Console1
 
             return ascii.GetString(convertedBytes);
         }
-        
+
         public static String AppendAll(IEnumerable<String> collection, String seperator)
         {
             using (var enumerator = collection.GetEnumerator())

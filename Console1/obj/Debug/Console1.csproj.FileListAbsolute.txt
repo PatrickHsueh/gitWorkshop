@@ -1,7 +1,0 @@
-D:\__gitWorkshop\Console1\bin\Debug\Console1.exe.config
-D:\__gitWorkshop\Console1\bin\Debug\Console1.exe
-D:\__gitWorkshop\Console1\bin\Debug\Console1.pdb
-D:\__gitWorkshop\Console1\obj\Debug\Console1.exe
-D:\__gitWorkshop\Console1\obj\Debug\Console1.pdb
-D:\__gitWorkshop\Console1\bin\Debug\Console1.exe.CodeAnalysisLog.xml
-D:\__gitWorkshop\Console1\bin\Debug\Console1.exe.lastcodeanalysissucceeded
