@@ -14,9 +14,18 @@ namespace Console1
         {
             test();
         }
+        public void test1()
+        {
+            Console.Write("\r{0} ", DateTime.Now.ToLongTimeString() );
+            Form1.foo1();
+            Form1.foo2();   //compile error
+        }
 
         public static void test()
         {
+            String path1 = "\\\\203.1.1.215\\Data_08$\\PDC轉檔";
+            var path2 = Path.Combine(path1, "PDCUse");
+
             Encoding big5 = Encoding.GetEncoding(950);
 
             String directory = @"g:\xx\";
