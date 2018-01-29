@@ -66,6 +66,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//test4();
 
 	CS50_test1_1();
+	return 0;
 
 	MyCL_one mycl;
 	//mycl.Run_1();
