@@ -14,6 +14,11 @@ public:
 
 private:
 	Ui::qtApp1Class ui;
+
+private slots:
+	void updateProgressBar();
+	void btnCancel();
+	
 };
 
 #endif // QTAPP1_H

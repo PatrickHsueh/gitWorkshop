@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	qtApp1 w;
 	w.show();
 	return a.exec();
+	return 0;
 }
 
 void test()
